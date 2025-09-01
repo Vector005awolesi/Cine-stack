@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cine stack - a library to store all your favourite movies"
+    />
+    <title>Cine stack - a library to store all your favourite movies</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="all.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="app-logo"><i class="fas fa-film"></i> Cine stack</h1>
+    </header>
+    <div id="movieInputSection">
+      <h2>Add a movie</h2>
+      <input
+        type="text"
+        name="movieTitle"
+        class="form-control"
+        id="movieTitle"
+        placeholder="Title"
+        required
+      />
+      <input
+        type="number"
+        name="movieYear"
+        class="form-control"
+        id="movieYear"
+        placeholder="Year"
+        required
+      />
+      <select name="movieGenre" class="form-select" id="movieGenre">
+        <option value="Action">Action</option>
+        <option value="Horror">Horror</option>
+        <option value="Sci-fi">Sci-fi</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Romance">Romance</option>
+      </select>
+      <button class="btn btn-primary" id="addMovieBtn">
+        Add movie <i class="fas fa-add"></i>
+      </button>
+    </div>
+    <section>
+      <div id="searchSection">
+        <h2 id="searchHeading"> <i class="fas fa-magnifying-glass"></i> Search movies</h2>
+        <input type="search" name="searchMovies" id="moviesSearch" class="form-control" placeholder="Search for movies added to catalogue">
+      </div>
+    </section>
+    <main>
+      <div id="movieDisplaySection">
+        <div class="card-section">
+        </div>
+      </div>
+    </main>
+    <div id="notificationContainer">
+      <p id="notificationMessage"></p>
+    </div>
+    <script src="app.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="all.js"></script>
+  </body>
+</html>

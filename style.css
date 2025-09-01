@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --body-background:#f9fafb;
+    --main-color: #1e3a8a;
+    --backfall-color:#f97316;
+    --secondary-background: #f3f4f6;
+    --secondary-fallback:#374151;
+    --shadow:0px 2px 3px #d4d1d1;
+
+}
+h1{
+    font-family: Oswald;
+}
+h2,h3,h4,p{
+    font-family: Lato;
+}
+body{
+    background-color: var(--body-background);
+}
+header{
+    box-shadow: var(--shadow);
+}
+#app-logo{
+    text-align: center;
+    font-size: 3rem;
+    color:var(--main-color);
+    letter-spacing: -2px;
+    margin-top:5px;
+}
+#movieInputSection{
+    padding:20px 30px; 
+    background-color: var(--secondary-background);
+    text-align: center;
+}
+input{
+    margin:5px !important
+}
+input#movieYear , select#movieGenre{
+   display: inline-block;
+   width:48%
+}
+#addMovieBtn{
+    width:50%;
+    margin: 10px;
+    /* text-align: right; */
+}
+#searchSection{
+    text-align:center;
+    margin:20px 0;
+    padding:20px 30px ;
+}
+#movieDisplaySection{
+    margin:20px 0;
+    padding:20px 20px ;
+}
+.card{
+    width:250px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    /* height:200px !important; */
+    padding:20px;
+    background-color: var(--secondary-background) !important;
+}
+.card-section{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap:10px;
+    /* justify-content: center;
+    align-items: center; */
+}
+.movie-tag{
+    color:var(--secondary-fallback);
+    margin:7px
+}
+.badge{
+    width:60% !important;
+    padding:7px !important;
+    font-size: 14px !important;
+    margin-left:0px !important
+}
+.romance {
+    background-color: rgb(247, 131, 189);
+}
+.btn-outline-danger{
+    width:50% !important;
+    text-align: center !important;
+    margin-top:5px !important
+}
+#notificationContainer{
+    z-index: 999;
+    width:auto;
+    color:rgb(4, 95, 148);
+    padding:10px 30px 0px;
+    background-color: rgba(64, 176, 241, 0.185);
+    border-radius: 10px;
+    border:dashed 3px rgb(64, 176, 241);
+    text-align: center;
+    position: absolute;
+    right:0;
+    top:70px;
+    opacity: 0;
+    transition: 500ms all;
+    backdrop-filter: blur(5px);
+    display:none;
+}
+.animate{
+    animation: popup 5s  ease-in-out;
+}
+@keyframes popup {
+    0%{
+        transform: translateX(100px);
+        opacity:0;
+    }
+    10%{
+        opacity:0.5
+    }
+    20% , 30% , 40% , 50% , 60% ,70%{
+        transform: translateX(-30px);
+        opacity: 1
+    }
+    80% {
+        opacity:0.5
+    }
+     90%, 100%{
+        transform: translateX(100px);
+        opacity: 0;
+        display: none;
+    }
+}
+
