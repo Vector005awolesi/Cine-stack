@@ -70,8 +70,8 @@ input#movieYear , select#movieGenre{
     flex-wrap: wrap;
     flex-direction: row;
     gap:10px;
-    /* justify-content: center;
-    align-items: center; */
+     justify-content: center;
+/*     align-items: center; */ 
 }
 .movie-tag{
     color:var(--secondary-fallback);
@@ -132,4 +132,5 @@ input#movieYear , select#movieGenre{
         display: none;
     }
 }
+
 
